@@ -10,7 +10,7 @@ pip install -e .
 
 You will need to make a change to one of the installed python packages (`geoalchemy`) to make it work with py3:
 
-In geoalchemy base.py change the following lines from:
+In your version of geoalchemy `base.py` change the following lines from:
 ```py
 from geoalchemy.utils import from_wkt
 from geoalchemy.functions import functions, _get_function, BaseFunction
@@ -21,6 +21,12 @@ to
 ```py
 from utils import from_wkt
 from functions import functions, _get_function, BaseFunction
+```
+
+Run:
+```zsh
+osm4routing --help 
+# this will print instructions for parsing an OSM XML file into edges.csv and nodes.csv
 ```
 
 ---
